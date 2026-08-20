@@ -3,20 +3,634 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Danielle Philipps | Healthcare Operations & Transformation</title>
+
+  <meta
+    name="description"
+    content="Healthcare operations leader focused on clinical operations, operational transformation, workflow strategy, digital health, analytics, and AI-enabled process improvement."
+  >
+
+  <style>
+    :root {
+      --bg: #060814;
+      --bg2: #0a0f22;
+      --panel: #0f1428;
+      --panel2: #151b35;
+      --text: #f8fbff;
+      --muted: #aeb7cb;
+      --blue: #2f6bff;
+      --violet: #6e5bff;
+      --aqua: #00b8d4;
+      --line: #26304f;
+      --good: #34d399;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 20% 0%, #142250 0%, transparent 35%),
+        radial-gradient(circle at 90% 10%, #25164c 0%, transparent 30%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(6, 8, 20, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--violet) 60%,
+        var(--aqua)
+      );
+      font-weight: 900;
+      box-shadow: 0 0 24px rgba(110, 91, 255, 0.32);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .hero {
+      padding: 100px 0 70px;
+    }
+
+    .eyebrow {
+      color: var(--aqua);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(46px, 8vw, 82px);
+      line-height: 1;
+      letter-spacing: -0.045em;
+      margin: 0;
+      max-width: 900px;
+    }
+
+    .gradient {
+      background: linear-gradient(
+        90deg,
+        #ffffff,
+        #aabaff 40%,
+        #6e5bff 70%,
+        #00b8d4
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-copy {
+      max-width: 820px;
+      font-size: 20px;
+      color: var(--muted);
+      margin: 30px 0 34px;
+    }
+
+    .hero-copy strong {
+      color: var(--white);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-weight: 750;
+      border: 1px solid #39466f;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      border: none;
+      box-shadow: 0 12px 30px rgba(47, 107, 255, 0.22);
+    }
+
+    .button.secondary {
+      background: rgba(17, 24, 49, 0.7);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 65px;
+    }
+
+    .metric {
+      background: linear-gradient(180deg, #111831, #0d1329);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(
+        90deg,
+        var(--blue),
+        var(--violet),
+        var(--aqua)
+      );
+    }
+
+    .metric-value {
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-label {
+      color: var(--aqua);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 850;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      letter-spacing: -0.03em;
+      margin: 0 0 14px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: var(--muted);
+      margin-bottom: 36px;
+      font-size: 17px;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .case {
+      background: linear-gradient(180deg, var(--panel), #0b1023);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .case-number {
+      color: #7f8dab;
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+    }
+
+    .case h3 {
+      font-size: 23px;
+      margin: 9px 0 10px;
+    }
+
+    .case p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .case-result {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: #e2e9ff;
+      font-weight: 700;
+    }
+
+    .dashboard-callout {
+      padding: 36px;
+      border-radius: 20px;
+      border: 1px solid #384574;
+      background:
+        radial-gradient(circle at right top, rgba(110,91,255,.22), transparent 35%),
+        linear-gradient(135deg, #101b3f, #15102d);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .dashboard-callout h3 {
+      font-size: 28px;
+      margin: 0 0 8px;
+    }
+
+    .dashboard-callout p {
+      color: var(--muted);
+      margin: 0;
+      max-width: 700px;
+    }
+
+    .skills {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .skill {
+      background: #10172d;
+      border: 1px solid #293455;
+      color: #c8d3eb;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 36px 0 50px;
+      color: #8290ac;
+      font-size: 12px;
+    }
+
+    .privacy-note {
+      margin-top: 14px;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 850px) {
+      .metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .case-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dashboard-callout {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .container {
+        width: min(100% - 26px, 1180px);
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Danielle Philipps</h1>
 
-  <h2>Healthcare Operations & Transformation</h2>
+<nav>
+  <div class="container nav-inner">
+    <div class="brand">
+      <div class="mark">DP</div>
+      <span>Danielle Philipps</span>
+    </div>
 
-  <p>
-    Healthcare operations leader focused on clinical operations,
-    operational transformation, workflow optimization, and
-    technology-enabled healthcare delivery.
-  </p>
+    <div class="nav-links">
+      <a href="#impact">Impact</a>
+      <a href="#work">Work</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="https://linkedin.com/in/danielle-philipps" target="_blank">
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</nav>
 
-  <p>Portfolio coming soon.</p>
+
+<header class="hero">
+  <div class="container">
+
+    <div class="eyebrow">
+      Healthcare Operations • Transformation • Digital Health
+    </div>
+
+    <h1>
+      Building healthcare operations that
+      <span class="gradient">scale smarter.</span>
+    </h1>
+
+    <p class="hero-copy">
+      I'm a healthcare operations leader with a clinical imaging background
+      who works at the intersection of
+      <strong>operations, clinicians, technology, analytics, and AI-enabled workflow design.</strong>
+      My focus is turning fragmented processes into scalable operating systems
+      that improve visibility, capacity, adoption, and execution.
+    </p>
+
+    <div class="buttons">
+      <a
+        class="button primary"
+        href="Danielle_Philipps_Operations_Intelligence_Portfolio_Dashboard_v1.html"
+      >
+        View Operations Intelligence Dashboard →
+      </a>
+
+      <a
+        class="button secondary"
+        href="https://linkedin.com/in/danielle-philipps"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+    </div>
+
+
+    <div class="metrics" id="impact">
+
+      <div class="metric">
+        <div class="metric-value">75% → 20–25%</div>
+        <div class="metric-label">
+          Reduction in reliance on outsourced physician reading coverage
+        </div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-value">11 of 17</div>
+        <div class="metric-label">
+          Current interpreting physicians personally recruited
+        </div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-value">4 → 13</div>
+        <div class="metric-label">
+          Physician adoption of internally developed clinical workflow technology
+        </div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-value">20+</div>
+        <div class="metric-label">
+          Distributed support staff under functional operational oversight
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+
+<section id="work">
+  <div class="container">
+
+    <div class="section-label">Selected Work</div>
+
+    <h2>Operations transformation in practice.</h2>
+
+    <p class="section-intro">
+      My work centers on understanding how clinical and operational systems
+      actually function, identifying where friction occurs, and building
+      processes, tools, and accountability structures that make the organization
+      more scalable.
+    </p>
+
+
+    <div class="case-grid">
+
+      <article class="case">
+        <div class="case-number">CASE STUDY 01</div>
+
+        <h3>Building Internal Clinical Capacity</h3>
+
+        <p>
+          Expanded physician capacity through recruiting, rate discussions,
+          onboarding, credentialing coordination, scheduling, performance
+          oversight, retention, and operational escalation management.
+        </p>
+
+        <div class="case-result">
+          Supported a strategic shift from predominantly outsourced reading
+          coverage toward a substantially more self-sufficient internal model.
+        </div>
+      </article>
+
+
+      <article class="case">
+        <div class="case-number">CASE STUDY 02</div>
+
+        <h3>Clinical Technology Adoption</h3>
+
+        <p>
+          Translated radiologist workflow requirements into actionable product
+          and UI recommendations, including click reduction, multi-monitor
+          usability, workflow visibility, and reading efficiency.
+        </p>
+
+        <div class="case-result">
+          Internal platform adoption expanded from 4 physicians to 13.
+        </div>
+      </article>
+
+
+      <article class="case">
+        <div class="case-number">CASE STUDY 03</div>
+
+        <h3>Operational Intelligence</h3>
+
+        <p>
+          Built operational reporting and analytical tools to bring visibility
+          to turnaround performance, platform utilization, workflow patterns,
+          physician capacity, cost structure, and operational opportunities.
+        </p>
+
+        <div class="case-result">
+          Converted fragmented operating data into decision-ready intelligence
+          for leadership and frontline operations.
+        </div>
+      </article>
+
+
+      <article class="case">
+        <div class="case-number">CASE STUDY 04</div>
+
+        <h3>AI-Enabled Operations</h3>
+
+        <p>
+          Designed and implemented AI-assisted workflows and automation to
+          reduce manual operational work, improve standardization, surface
+          exceptions, and support better human decision-making.
+        </p>
+
+        <div class="case-result">
+          AI is used as an operational capability — not as a replacement for
+          clinical or human oversight.
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="dashboard">
+  <div class="container">
+
+    <div class="dashboard-callout">
+
+      <div>
+        <div class="section-label">Interactive Portfolio</div>
+
+        <h3>Operations Intelligence Dashboard</h3>
+
+        <p>
+          Explore an anonymized demonstration of how I structure operational
+          analytics across turnaround performance, cost efficiency, platform
+          utilization, capacity, workflow, and operational impact.
+        </p>
+      </div>
+
+      <div>
+        <a
+          class="button primary"
+          href="Danielle_Philipps_Operations_Intelligence_Portfolio_Dashboard_v1.html"
+        >
+          Open Dashboard →
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="skills">
+
+      <span class="skill">Healthcare Operations</span>
+      <span class="skill">Clinical Operations</span>
+      <span class="skill">Operational Transformation</span>
+      <span class="skill">Physician Operations</span>
+      <span class="skill">Workflow Design</span>
+      <span class="skill">Digital Health</span>
+      <span class="skill">PACS</span>
+      <span class="skill">Operational Analytics</span>
+      <span class="skill">AI & Automation</span>
+      <span class="skill">Product Partnership</span>
+      <span class="skill">SOP Development</span>
+      <span class="skill">Change Management</span>
+      <span class="skill">Distributed Teams</span>
+
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+
+    <strong>Danielle Philipps</strong><br>
+    Healthcare Operations • Transformation • Digital Health
+
+    <div class="privacy-note">
+      Portfolio examples are anonymized, reconstructed, aggregated, or otherwise
+      modified to protect confidential business, provider, facility, and patient
+      information. No PHI or proprietary source data is presented.
+    </div>
+
+  </div>
+</footer>
+
 </body>
 </html>
